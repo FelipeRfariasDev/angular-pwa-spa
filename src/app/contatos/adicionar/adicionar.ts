@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 export class ContatosAdicionarComponent implements OnInit {
 
   contato = {} as Contatos;
+  msg:String;
 
   constructor(private service: ContatosService) { }
 
@@ -19,6 +20,8 @@ export class ContatosAdicionarComponent implements OnInit {
   adicionar(form: NgForm) {
     this.service.adicionar(this.contato).subscribe(() => {
       form.resetForm();
+      this.msg="adicionado com sucesso";
+      location.href = "contatos-listar";
     });
   }
 }

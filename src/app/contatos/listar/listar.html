@@ -15,8 +15,8 @@
             <td>{{contato.nome}}</td>
             <td>{{contato.email}}</td>
             <td>
-              <button type="button" class="btn btn-primary btn-sm">ALTERAR</button>
-              <button type="button" class="btn btn-danger btn-sm" (click)="excluir(contato)">X</button>
+              <a href="contatos-alterar/{{contato.id}}" class="btn btn-primary btn-sm">ALTERAR</a>
+              <a href="javascript:void(0)" class="btn btn-danger btn-sm" (click)="excluir(contato)">X</a>
             </td>
           </tr>
         </tbody>

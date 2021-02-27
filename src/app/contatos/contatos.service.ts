@@ -14,7 +14,6 @@ export class ContatosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  //listar contatos
   getAll(): Observable<Contatos[]> {
     return this.httpClient.get<Contatos[]>(this.url)
       .pipe(
@@ -22,7 +21,14 @@ export class ContatosService {
         catchError(this.handleError))
   }
 
-  //excluir contato
+  getContatoById(id: number): Observable<Contatos> {
+    return this.httpClient.get<Contatos>(this.url + '/' + id)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+
   excluir(contato: Contatos) {
     return this.httpClient.delete<Contatos>(this.url + '/' + contato.id, this.httpOptions)
       .pipe(
@@ -31,11 +37,18 @@ export class ContatosService {
       )
   }
 
-  //adicionar contato
   adicionar(contato: Contatos): Observable<Contatos> {
     return this.httpClient.post<Contatos>(this.url, JSON.stringify(contato), this.httpOptions)
       .pipe(
         retry(2),
+        catchError(this.handleError)
+      )
+  }
+
+  alterar(contato: Contatos): Observable<Contatos> {
+    return this.httpClient.put<Contatos>(this.url + '/' + contato.id, JSON.stringify(contato), this.httpOptions)
+      .pipe(
+        retry(1),
         catchError(this.handleError)
       )
   }

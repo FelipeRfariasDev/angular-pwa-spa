@@ -1,8 +1,15 @@
 <h1 class="display-4">Contatos</h1>
    
 <div class="card add-contato">
+
     <h5 class="card-header">Adicionar</h5>
+
     <div class="card-body">
+
+        <div class="alert alert-success" role="alert" *ngIf="msg">
+            {{msg}}
+        </div>
+        
         <form id="add-form" (ngSubmit)="f.form.valid && adicionar(f)" #f="ngForm">
           <div class="form-group">
               <label for="nome">Nome</label>
