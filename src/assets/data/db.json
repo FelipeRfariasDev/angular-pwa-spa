@@ -1,19 +1,9 @@
 {
   "contatos": [
     {
-      "nome": "Felipe Farias - alterado",
-      "email": "felipe.farias@gmail.com",
-      "id": 1
-    },
-    {
       "nome": "Giane Farias",
       "email": "giane.farias@gmail.com",
       "id": 3
-    },
-    {
-      "nome": "Giane Farias",
-      "email": "giane.farias@gmail.com",
-      "id": 4
     }
   ]
 }

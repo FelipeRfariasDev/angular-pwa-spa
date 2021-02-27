@@ -14,11 +14,21 @@ export class ContatosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getContatos(): Observable<Contatos[]> {
+  //listar contatos
+  getAll(): Observable<Contatos[]> {
     return this.httpClient.get<Contatos[]>(this.url)
       .pipe(
         retry(2),
         catchError(this.handleError))
+  }
+
+  //excluir contato
+  excluir(contato: Contatos) {
+    return this.httpClient.delete<Contatos>(this.url + '/' + contato.id, this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      )
   }
 
   httpOptions = {

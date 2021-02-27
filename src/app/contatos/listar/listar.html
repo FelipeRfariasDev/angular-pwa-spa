@@ -1,5 +1,4 @@
-<h1 class="display-4">Contatos</h1>
-<p class="lead">Listar</p>
+<h1 class="display-4">Contatos<a href="contatos-adicionar">+</a></h1>
 <div class="table-responsive">
     <table class="table">
         <thead>
@@ -16,8 +15,8 @@
             <td>{{contato.nome}}</td>
             <td>{{contato.email}}</td>
             <td>
-              <a href="#" class="btn btn-warning btn-sm">Alterar</a>
-              <a href="#" class="btn btn-danger btn-sm" onClick="return confirm('Tem certeza?')">X</a>
+              <button type="button" class="btn btn-primary btn-sm">ALTERAR</button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="excluir(contato)">X</button>
             </td>
           </tr>
         </tbody>

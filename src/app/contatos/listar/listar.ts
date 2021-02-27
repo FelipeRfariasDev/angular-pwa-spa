@@ -8,17 +8,24 @@ import { ContatosService } from '../contatos.service';
 })
 export class ContatosListarComponent implements OnInit {
 
+  contato = {} as Contatos;
   contatos: Contatos[];
 
   constructor(private service: ContatosService) { }
 
   ngOnInit(): void {
-    this.getContatos();
+    this.getAll();
   }
 
-  getContatos() {
-    this.service.getContatos().subscribe((contatos: Contatos[]) => {
+  getAll() {
+    this.service.getAll().subscribe((contatos: Contatos[]) => {
       this.contatos = contatos;
+    });
+  }
+
+  excluir(contato: Contatos) {
+    this.service.excluir(contato).subscribe(() => {
+      this.getAll();
     });
   }
 
