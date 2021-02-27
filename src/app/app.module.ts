@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
-import { AppComponent } from './app.component';
+import { AppLayout } from './layout/app.layout';
+import { MenuComponent } from './menu/menu';
 import { ContatosListarComponent } from './contatos/listar/listar';
 import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
 import { ContatosExcluirComponent } from './contatos/excluir/excluir';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 
+import { ContatosService } from './contatos/contatos.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppLayout,
+    MenuComponent,
     ContatosListarComponent,
     ContatosAdicionarComponent,
     ContatosExcluirComponent,
@@ -25,7 +29,7 @@ import { ContatosAlterarComponent } from './contatos/alterar/alterar';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ContatosService],
+  bootstrap: [AppLayout]
 })
 export class AppModule { }
