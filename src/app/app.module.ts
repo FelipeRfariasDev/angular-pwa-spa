@@ -12,7 +12,6 @@ import { AppLayout } from './layout/app.layout';
 import { MenuComponent } from './menu/menu';
 import { ContatosListarComponent } from './contatos/listar/listar';
 import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
-import { ContatosExcluirComponent } from './contatos/excluir/excluir';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 
 import { ContatosService } from './contatos/contatos.service';
@@ -24,7 +23,6 @@ import { ContatosService } from './contatos/contatos.service';
     MenuComponent,
     ContatosListarComponent,
     ContatosAdicionarComponent,
-    ContatosExcluirComponent,
     ContatosAlterarComponent
   ],
   imports: [

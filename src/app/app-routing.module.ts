@@ -3,14 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
-import { ContatosExcluirComponent } from './contatos/excluir/excluir';
 import { ContatosListarComponent } from './contatos/listar/listar';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/contatos-listar', pathMatch: 'full'},
   { path: 'contatos-listar',      component: ContatosListarComponent      },
   { path: 'contatos-adicionar',   component: ContatosAdicionarComponent   },
-  { path: 'contatos-excluir',     component: ContatosExcluirComponent     },
-  { path: 'contatos-alterar',     component: ContatosAlterarComponent     }
+  { path: 'contatos-alterar/:id',     component: ContatosAlterarComponent },
 ];
 
 @NgModule({

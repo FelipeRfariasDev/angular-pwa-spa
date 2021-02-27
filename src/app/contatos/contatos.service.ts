@@ -31,6 +31,15 @@ export class ContatosService {
       )
   }
 
+  //adicionar contato
+  adicionar(contato: Contatos): Observable<Contatos> {
+    return this.httpClient.post<Contatos>(this.url, JSON.stringify(contato), this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
