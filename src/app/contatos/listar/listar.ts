@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Contatos } from '../contatos.models';
+import { ContatosService } from '../contatos.service';
 
 @Component({
   selector: 'contatos-listar',
@@ -6,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatosListarComponent implements OnInit {
 
-  constructor() { }
+  contatos: Contatos[];
+
+  constructor(private service: ContatosService) { }
 
   ngOnInit(): void {
+    this.getContatos();
+  }
+
+  getContatos() {
+    this.service.getContatos().subscribe((contatos: Contatos[]) => {
+      this.contatos = contatos;
+    });
   }
 
 }

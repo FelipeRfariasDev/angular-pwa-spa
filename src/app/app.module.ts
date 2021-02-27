@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppLayout } from './layout/app.layout';
 import { MenuComponent } from './menu/menu';
 import { ContatosListarComponent } from './contatos/listar/listar';
@@ -27,6 +30,8 @@ import { ContatosService } from './contatos/contatos.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ContatosService],

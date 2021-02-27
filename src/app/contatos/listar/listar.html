@@ -1,2 +1,25 @@
 <h1 class="display-4">Contatos</h1>
 <p class="lead">Listar</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contato of contatos">
+            <td>{{contato.id}}</td>
+            <td>{{contato.nome}}</td>
+            <td>{{contato.email}}</td>
+            <td>
+              <a href="#" class="btn btn-warning btn-sm">Alterar</a>
+              <a href="#" class="btn btn-danger btn-sm" onClick="return confirm('Tem certeza?')">X</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
