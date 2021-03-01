@@ -1,8 +1,8 @@
 {
-  "name": "crud-angular",
-  "short_name": "crud-angular",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "RedBelt",
+  "short_name": "RedBelt",
+  "theme_color": "#d2191a",
+  "background_color": "#d2191a",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

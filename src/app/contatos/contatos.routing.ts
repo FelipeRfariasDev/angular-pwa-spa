@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
-import { ContatosAlterarComponent } from './contatos/alterar/alterar';
-import { ContatosListarComponent } from './contatos/listar/listar';
+import { ContatosAdicionarComponent } from './adicionar/adicionar';
+import { ContatosAlterarComponent } from './alterar/alterar';
+import { ContatosListarComponent } from './listar/listar';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/contatos-listar', pathMatch: 'full'},
@@ -16,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class ContatosRouting { }

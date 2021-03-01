@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.layout.html'
 })
 
-export class AppLayout {
-  title = 'crud-angular';
-}
+export class AppLayout {}
