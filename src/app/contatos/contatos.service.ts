@@ -10,7 +10,7 @@ import { Contatos } from './contatos.models';
 })
 export class ContatosService {
 
-  url = 'http://localhost:3000/contatos';
+  url = 'http://localhost:8000/api/contatos';
 
   constructor(private httpClient: HttpClient) { }
 
