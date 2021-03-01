@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppLayout {
-  title = 'crud-angular-pwa';
+  title = 'crud-angular';
 }
