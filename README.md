@@ -1,5 +1,10 @@
 # Crud Angular Pwa (RedBelt)
 
+### Instalação
+
+No diretório `crud-angular-pwa` digite `npm install`
+
+
 ### Desenvolvimento
 
 No diretório `crud-angular-pwa` digite `ng serve --open` será aberto no seu navedador padrão `http://localhost:4200/`.
