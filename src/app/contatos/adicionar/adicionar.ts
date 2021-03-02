@@ -21,7 +21,6 @@ export class ContatosAdicionarComponent implements OnInit {
     this.service.adicionar(this.contato).subscribe(() => {
       form.resetForm();
       this.msg="adicionado com sucesso";
-      location.href = "contatos-listar";
     });
   }
 }

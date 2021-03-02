@@ -27,7 +27,6 @@ export class ContatosAlterarComponent implements OnInit {
   alterar(form: NgForm) {
     this.service.alterar(this.contato).subscribe(() => {
       this.msg="alterado com sucesso";
-      location.href = "contatos-listar";
     });
   }
 }
