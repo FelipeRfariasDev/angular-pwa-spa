@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Contatos } from '../contatos.models';
 import { ContatosService } from '../contatos.service';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'contatos-adicionar',
@@ -12,15 +12,17 @@ export class ContatosAdicionarComponent implements OnInit {
   contato = {} as Contatos;
   msg:String;
 
-  constructor(private service: ContatosService) { }
+  constructor(
+    private service: ContatosService,
+    private _Router: Router
+    ) { }
 
   ngOnInit(): void {
   }
 
-  adicionar(form: NgForm) {
+  adicionar() {
     this.service.adicionar(this.contato).subscribe(() => {
-      form.resetForm();
-      this.msg="adicionado com sucesso";
+      this._Router.navigate(['contatos-listar']);
     });
   }
 }

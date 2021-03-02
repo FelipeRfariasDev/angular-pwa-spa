@@ -10,7 +10,7 @@
             {{msg}}
         </div>
 
-        <form id="add-form" (ngSubmit)="f.form.valid && alterar(f)" #f="ngForm">
+        <form id="add-form" (ngSubmit)="f.form.valid && alterar()" #f="ngForm">
           <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" [(ngModel)]="contato.nome" name="nome" #nome="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" placeholder="Digite o nome">

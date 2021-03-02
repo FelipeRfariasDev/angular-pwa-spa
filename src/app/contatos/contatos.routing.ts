@@ -7,7 +7,7 @@ import { ContatosListarComponent } from './listar/listar';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/contatos-listar', pathMatch: 'full'},
+  { path: '', redirectTo: 'contatos-listar', pathMatch: 'full'},
   { path: 'contatos-listar',      component: ContatosListarComponent      },
   { path: 'contatos-adicionar',   component: ContatosAdicionarComponent   },
   { path: 'contatos-alterar/:id',     component: ContatosAlterarComponent },

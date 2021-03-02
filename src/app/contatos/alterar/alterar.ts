@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Contatos } from '../contatos.models';
 import { ContatosService } from '../contatos.service';
 
@@ -12,21 +11,26 @@ export class ContatosAlterarComponent implements OnInit {
 
   contato = {} as Contatos;
   msg:String;
-  constructor(private service: ContatosService, private route: ActivatedRoute) { }
+
+  constructor(
+    private _Service: ContatosService, 
+    private _ActivatedRoute: ActivatedRoute,
+    private _Router: Router
+    ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe( parametros => {
+    this._ActivatedRoute.params.subscribe( parametros => {
       if (parametros.id) {
-        this.service.getContatoById(parametros.id).subscribe((contato: Contatos) => {
+        this._Service.getContatoById(parametros.id).subscribe((contato: Contatos) => {
           this.contato = contato;
         });
       }
     });
   }
 
-  alterar(form: NgForm) {
-    this.service.alterar(this.contato).subscribe(() => {
-      this.msg="alterado com sucesso";
+  alterar() {
+    this._Service.alterar(this.contato).subscribe(() => {
+      this._Router.navigate(['contatos-listar']);
     });
   }
 }
