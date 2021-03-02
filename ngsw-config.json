@@ -26,5 +26,18 @@
         ]
       }
     }
+  ],
+  "dataGroups":[
+    {
+      "name" : "api-performance",
+      "urls": [
+        "http://localhost:8000/api/contatos"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "3d"
+      }
+    }
   ]
 }
