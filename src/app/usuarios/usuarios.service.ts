@@ -15,7 +15,16 @@ export class UsuariosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  adicionar(usuario: Usuarios): Observable<Usuarios> {
+  async login (usuario:any) {
+    const result = await this.httpClient.post<any>(this.url_login, JSON.stringify(usuario),this.httpOptions).toPromise();
+    if(result && result.access_token){
+      window.localStorage.setItem('access_token',result.access_token);
+      return true;
+    }
+    return false;
+  } 
+
+   adicionar(usuario: Usuarios): Observable<Usuarios> {
     return this.httpClient.post<Usuarios>(this.url, JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(2),
@@ -24,7 +33,7 @@ export class UsuariosService {
   }
 
   
-  login(usuario: Usuarios): Observable<Usuarios> {
+  logina(usuario: Usuarios): Observable<Usuarios> {
     return this.httpClient.post<Usuarios>(this.url_login, JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(2),

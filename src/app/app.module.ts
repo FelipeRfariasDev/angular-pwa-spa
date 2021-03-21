@@ -17,6 +17,8 @@ import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 import { UsuariosAdicionarComponent } from './usuarios/adicionar/adicionar';
 import { UsuariosLoginComponent } from './usuarios/login/login';
+import { AutenticacaoComponent } from './usuarios/autenticacao/autenticacao';
+import {HomeComponent} from './home/home';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { UsuariosLoginComponent } from './usuarios/login/login';
     ContatosAdicionarComponent,
     ContatosAlterarComponent,
     UsuariosAdicionarComponent,
-    UsuariosLoginComponent
+    UsuariosLoginComponent,
+    AutenticacaoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

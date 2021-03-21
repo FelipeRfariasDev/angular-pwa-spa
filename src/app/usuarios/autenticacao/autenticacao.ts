@@ -5,10 +5,10 @@ import { Usuarios } from '../usuarios.models';
 import { UsuariosService } from '../usuarios.service';
 
 @Component({
-  selector: 'login',
-  templateUrl: './login.html'
+  selector: 'autenticacao',
+  templateUrl: './autenticacao.html'
 })
-export class UsuariosLoginComponent implements OnInit {
+export class AutenticacaoComponent implements OnInit {
 
   usuario = {} as Usuarios;
   msg:String;
@@ -25,7 +25,8 @@ export class UsuariosLoginComponent implements OnInit {
 
       const result = await this.service.login(this.usuario);
       console.log('Sucesso login: ' + result);
-      this.router.navigate(['']);
+      this.msg = "Login realizado com sucesso";
+      this.router.navigate(['contatos-listar']);
     } catch (error) {
 
       
@@ -36,3 +37,4 @@ export class UsuariosLoginComponent implements OnInit {
   }
 
 }
+
