@@ -35,4 +35,20 @@ export class UsuariosLoginComponent implements OnInit {
       
   }
 
+  async logout() {
+
+    try {
+
+      window.localStorage.setItem('access_token','');
+      console.log('Logout realizado com sucesso: ');
+      this.router.navigate(['']);
+      
+    } catch (error) {
+
+      
+      console.log(error);
+
+    }
+  }
+
 }

@@ -19,8 +19,10 @@ export class UsuariosService {
     const result = await this.httpClient.post<any>(this.url_login, JSON.stringify(usuario),this.httpOptions).toPromise();
     if(result && result.access_token){
       window.localStorage.setItem('access_token',result.access_token);
+      console.log("deu certo" + true);
       return true;
     }
+    console.log("login errado" + true);
     return false;
   } 
 

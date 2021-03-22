@@ -19,6 +19,7 @@ import { UsuariosAdicionarComponent } from './usuarios/adicionar/adicionar';
 import { UsuariosLoginComponent } from './usuarios/login/login';
 import { AutenticacaoComponent } from './usuarios/autenticacao/autenticacao';
 import {HomeComponent} from './home/home';
+import { UsuariosLogoutComponent } from './usuarios/logout/logout';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {HomeComponent} from './home/home';
     UsuariosAdicionarComponent,
     UsuariosLoginComponent,
     AutenticacaoComponent,
-    HomeComponent
+    HomeComponent,
+    UsuariosLogoutComponent
   ],
   imports: [
     BrowserModule,
