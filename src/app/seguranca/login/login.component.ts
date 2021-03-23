@@ -21,7 +21,7 @@ export class LoginComponent {
     try {
       const result = await this.service.login(this.usuario);
       console.log('Sucesso login: ' + result);
-      await this.router.navigate(['']);
+      await this.router.navigate(['contatos-listar']);
     } catch (error) {
 
       this.msg = "email e senha não foi encontrado";

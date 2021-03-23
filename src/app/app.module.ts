@@ -14,9 +14,10 @@ import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 
 import { ContatosService } from './contatos/contatos.service';
-import {HomeComponent} from './home/home.component';
+
 import {LoginComponent} from './seguranca/login/login.component';
 import {NovoUsuarioComponent} from './usuarios/novo/novo.usuario.component';
+import {HomeComponent} from './home/home.component';
 
 
 @NgModule({

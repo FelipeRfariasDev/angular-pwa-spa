@@ -10,9 +10,12 @@ export class AppLayout {
 
   access_token:any = window.localStorage.getItem('access_token');
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router) {
+    if(this.access_token){
+      this.access_token = true;
+    }
+    this.access_token = false;
+  }
 
   Logout() {
 
