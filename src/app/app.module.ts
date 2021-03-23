@@ -15,6 +15,7 @@ import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 
 import { ContatosService } from './contatos/contatos.service';
 import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './seguranca/login/login.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {HomeComponent} from './home/home.component';
     ContatosListarComponent,
     ContatosAdicionarComponent,
     ContatosAlterarComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -5,11 +5,13 @@ import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
 import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 import { ContatosListarComponent } from './contatos/listar/listar';
 import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './seguranca/login/login.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home',      component: HomeComponent      },
+  { path: 'login',      component: LoginComponent      },
   { path: 'contatos-listar',      component: ContatosListarComponent      },
   { path: 'contatos-adicionar',   component: ContatosAdicionarComponent   },
   { path: 'contatos-alterar/:id',     component: ContatosAlterarComponent },
