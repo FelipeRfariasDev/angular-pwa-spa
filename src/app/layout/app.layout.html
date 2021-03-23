@@ -5,7 +5,7 @@
   <nav class="my-2 my-md-0 me-md-3">
 
     <a class="p-2 text-dark" routerLink="login">Login</a>
-    <a class="p-2 text-dark" routerLink="logout">Logout</a>
+    <a class="p-2 text-dark" (click)="Logout()">Logout</a>
     <a class="p-2 text-dark" routerLink="novo-usuario">novo usuario</a>
 
     <a class="p-2 text-dark" routerLink="contatos-listar" *ngIf="access_token">Contatos</a>

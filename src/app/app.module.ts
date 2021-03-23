@@ -16,7 +16,6 @@ import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 import { ContatosService } from './contatos/contatos.service';
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './seguranca/login/login.component';
-import {LogoutComponent} from './seguranca/logout/logout.component';
 import {NovoUsuarioComponent} from './usuarios/novo/novo.usuario.component';
 
 
@@ -28,7 +27,6 @@ import {NovoUsuarioComponent} from './usuarios/novo/novo.usuario.component';
     ContatosAlterarComponent,
     HomeComponent,
     LoginComponent,
-    LogoutComponent,
     NovoUsuarioComponent
   ],
   imports: [
