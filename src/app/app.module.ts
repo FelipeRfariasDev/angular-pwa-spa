@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { ContatosRouting } from './contatos.routing';
+import { AppRouting } from './app.routing';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../../environments/environment';
+import { environment } from '../environments/environment';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { AppLayout } from '../layout/app.layout';
-import { ContatosListarComponent } from './listar/listar';
-import { ContatosAdicionarComponent } from './adicionar/adicionar';
-import { ContatosAlterarComponent } from './alterar/alterar';
+import { AppLayout } from './layout/app.layout';
+import { ContatosListarComponent } from './contatos/listar/listar';
+import { ContatosAdicionarComponent } from './contatos/adicionar/adicionar';
+import { ContatosAlterarComponent } from './contatos/alterar/alterar';
 
-import { ContatosService } from './contatos.service';
+import { ContatosService } from './contatos/contatos.service';
+import {HomeComponent} from './home/home.component';
 
 
 @NgModule({
@@ -21,11 +22,12 @@ import { ContatosService } from './contatos.service';
     AppLayout,
     ContatosListarComponent,
     ContatosAdicionarComponent,
-    ContatosAlterarComponent
+    ContatosAlterarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    ContatosRouting,
+    AppRouting,
     HttpClientModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
@@ -33,4 +35,4 @@ import { ContatosService } from './contatos.service';
   providers: [ContatosService],
   bootstrap: [AppLayout]
 })
-export class ContatosModule { }
+export class AppModule { }
